@@ -64,7 +64,7 @@ var diceDOM = document.querySelector('.dice');
 
       document.querySelector('#score-' + activePlayer).textContent = scores[activePlayer];
 
-      if(scores[activePlayer] >= 100)
+      if(scores[activePlayer] >= document.getElementById('ramka').value)
       {
       document.querySelector("#name-" + activePlayer).textContent = "Winner";
       gamePlaying = false;

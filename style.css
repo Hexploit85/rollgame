@@ -6,7 +6,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    
+
 }
 
 .clearfix::after {
@@ -80,7 +80,7 @@ body {
     color: #EB4D4D;
     top: -7px;
     right: 10px;
-    
+
 }
 
 .player-current-box {
@@ -140,6 +140,19 @@ i {
 .btn-new { top: 45px;}
 .btn-roll { top: 403px;}
 .btn-hold { top: 467px;}
+.text {top: 15px;}
+
+input[type = text]{
+  position: absolute;
+  left: 46%;
+  top: 30%;
+}
+
+.pisanko{
+  position: absolute;
+  left: 47%;
+  top: 27%;
+}
 
 .dice {
     position: absolute;
