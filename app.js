@@ -20,7 +20,8 @@ document.querySelector('.btn-roll').addEventListener('click',function(){
   diceroll.push(dice);
 
 
-  console.log( diceroll);
+  console.log( diceroll[diceroll.length-2], diceroll[diceroll.length-1]);
+
 //  console.log("Ostatni element to " +diceroll[diceroll.lenght-1]+ " Przedostatni element to "+ diceroll[diceroll.lenght-2]);
 
 
@@ -32,16 +33,18 @@ var diceDOM = document.querySelector('.dice');
 
   //update rounds
 
-  if (dice !== 1)
+  if (dice === 6 && diceroll[diceroll.length-2] === 6)
   {
-    roundScore += dice;
-    document.querySelector('#current-' + activePlayer).textContent = roundScore;
-
-  }
-  else if ((diceroll[diceroll.lenght-1]) === 6 && (diceroll[diceroll.lenght-2])===6 ) {
     scores[activePlayer] = 0;
     roundScore = 0;
     document.querySelector('#score-' + activePlayer).textContent = scores[activePlayer];
+    document.querySelector('#current-' + activePlayer).textContent = roundScore;
+    nextPlayer();
+
+  }
+  else if (dice !== 1) {
+
+    roundScore += dice;
     document.querySelector('#current-' + activePlayer).textContent = roundScore;
   }
   else
